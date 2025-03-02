@@ -23,6 +23,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/chat-box', actions)
+app.use('/images', express.static('images'));
 
 app.listen(PORT, () => {
     console.log(`Server has started on port: ${PORT}`)

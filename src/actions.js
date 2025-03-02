@@ -10,7 +10,6 @@ router.post('/', async (req, res) => {
         const apiMessage = await getGroqChatCompletion(history, philosopher);
         if (apiMessage && apiMessage.choices && apiMessage.choices.length > 0) {
             const messageContent = apiMessage.choices[0].message.content;
-            console.log(messageContent || "Error: No response");
             res.json(messageContent);
         } else {
             console.error("Invalid API response format:", apiMessage);

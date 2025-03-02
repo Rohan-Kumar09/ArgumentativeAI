@@ -2,59 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Philosopher Argue</title>
-  <link rel="stylesheet" href="./style.css">
+  <meta name="viewport" 
+        content = "width=device-width", 
+        initial-scale="1.0">
+  <title>Choose a Philosopher</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color:#eaded6;">
-  <div class="block" style="margin-top: 0%">
+
+  <div class="block" style=" margin-top: 0%">
     <div class="in_block">
-      <h1 class="heading" style="color: #936748">Argue With a Philosopher</h1>
+      <center>
+        <h1 class="heading" style="color: #ffffff">Debate a Philosopher</h1>
+      </center>
     </div>
   </div>
 
-  <h2 id="replaceME" style="color: #241401"></h2>
+  <body style="background-color:#1e1e1e;">
+  <h2 style="color: #241401"> </h2>
 
   <!-- This is the gallery -->
-  <div class="row">
-    <div class="column myModal modal">
-      <div class="content myModal modal">
-        <img class="zoom myImg" src="idk.jpg" alt="Philosopher" style="width:100%">
-        <h3>Philosopher</h3>
-        <p>description.</p>
-        <p>description.</p>
-        <a href="chat-box.html?philosopher=Plato">Chat with Philosopher</a>
-      </div>
-    </div>
 
-    <div class="column myModal modal">
-      <div class="content myModal modal">
-        <img class="zoom myImg" src="idk.jpg" alt="Philosopher" style="width:100%">
-        <h3>Philosopher</h3>
-        <p>description.</p>
-        <p>description.</p>
-        <a href="chat-box.html?philosopher=Aristotle">Chat with Philosopher</a>
-      </div>
-    </div>
 
-    <div class="column myModal modal">
-      <div class="content myModal modal">
-        <img class="zoom myImg" src="idk.jpg" alt="Philosopher" style="width:100%">
-        <h3>Philosopher</h3>
-        <p>description.</p>
-        <p>description.</p>
-        <a href="chat-box.html?philosopher=UrDog">Chat with Philosopher</a>
-      </div>
-    </div>
+<div class="button-container" id="divPad" >
 
-    <div class="column myModal modal">
-      <div class="content myModal modal">
-        <img class="zoom myImg" src="idk.jpg" alt="Philosopher" style="width:100%">
-        <h3>Philosopher</h3>
-        <p>description.</p>
-        <p>description.</p>
-        <a href="chat-box.html?philosopher=UrCat">Chat with Philosopher</a>
+
+ <a href="chat-box.html?philosopher=Plato"  style="color: #ffffff">
+    <button class="padder">
+      <div>
+        <img src="../images/Plato.jpg" alt="Plato" style="width:100%">
+           <h1>Plato</h1>
       </div>
+    </button>
+</a>
+
+<a href="chat-box.html?philosopher=Aristotle" style="color: #ffffff">
+   <button class="padder">
+     <div>
+       <img src="../images/Aristotle.jpg" alt="Aristotle" style="width:100%">
+          <h1>Aristotle</h1>
+     </div>
+   </button>
+</a>
+
+<a href="chat-box.html?philosopher=Socrates" style="color: #ffffff">
+  <button class="padder">
+    <div>
+      <img src="../images/Socrates.jpg" alt="Socrates" style="width:100%">
+         <h1>Socrates</h1>
     </div>
-  </div>
-</body>
+  </button>
+</a>
+
+<a href="chat-box.html?philosopher=Cat" style="color: #ffffff">
+  <button class="padder">
+    <div>
+      <img src="../images/Cat.jpg" alt="Cat" style="width:100%">
+         <h1>Cat</h1>
+    </div>
+  </button>
+</a>
+
+</div>
+  </body>
 </html>

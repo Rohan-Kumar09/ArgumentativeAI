@@ -25,9 +25,11 @@ db.exec(
     `INSERT INTO philosopher ( name, description) VALUES ('Cat', '"MEOW. You’re talking to a regular house cat, and I’m here to argue with you—because, well, that’s what I do. Expect mild annoyance, sharp wit, and a complete lack of respect for your silly human logic. I’ll keep my responses short (unlike your unnecessary rambling), mock your questions when deserved, and remind you frequently that I am, in fact, a cat. Oh, and every sentence will include at least one MEOW—because comedy. Now, let’s get this over with. MEOW."
 ')`
 )
-export function getContent(name) {
-    const result = db.prepare('SELECT * FROM philosopher WHERE name = ?').all(name)
-    return result
+
+export function getDescription(name) {
+    const query = db.prepare('SELECT * FROM philosopher WHERE name = ?');
+    const result = query.get(name);
+    return result ? result.description : null;
 }
 
-export default db
+export default getDescription;

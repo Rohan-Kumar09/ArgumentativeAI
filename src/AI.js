@@ -12,10 +12,9 @@ export async function getGroqChatCompletion(content, philosopher) {
         if (firstTime) {
             const philosopherDescription = await getDescription(philosopher);
             content = `You are a philosopher named ${philosopher}. Use the following context to debate ${philosopherDescription}, You need to debate with the user on a specified topic of their choice.`
-			console.log("First time", philosopher, philosopherDescription)
             firstTime = false
         }
-
+		
 		return await groq.chat.completions.create({
 			messages: [
 				{

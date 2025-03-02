@@ -1,46 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Space%20Grotesk:700|Space%20Grotesk:400');
 
-body {
-    background-color: #eaded6;
+* {
+    box-sizing: border-box;
+    margin: auto;
+    padding: auto;
+    list-style: none;
+    text-decoration: none;
 }
 
 .block {
-    margin-top: 0%;
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color: #2e2e2e
 }
 
 .in_block {
-    text-align: center;
-}
-
-.heading {
-    color: #936748;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.column {
-    flex: 1;
-    max-width: 25%;
-    padding: 10px;
-}
-
-.myModal {
+    width:1000px;
+    height: 100%;
     display: block;
+    margin:  auto;
+    background-color: #2e2e2e;
 }
 
-.modal {
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #fff;
+body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+
 }
 
-.zoom {
-    width: 100%;
+img {
+    max-width: 100%; /* Adjust this value to change the image size */
+    height: auto;
 }
 
-.content {
-    text-align: center;
+:root {
+/*  This is to scale of the card and the rainbow lighting animation.  */
+--scale: 4rem;
+
+--red: #FF6565;
+--blue: #4fc3f7;
+--violet: #ad5cad;
+--indigo: #4D8AFF;
+--green: #5BFF89;
+--yellow: #FFEE55;
+--orange: #FF6D1B;
+
+}
+
+button {
+
+border: calc(0.08 * var(--scale)) solid transparent;
+position: relative;
+color: #F3F3F3;
+font-family: 'Space Grotesk';
+font-size: var(--scale);
+border-radius: calc(0.7 * var(--scale));
+padding: calc(0.5 * var(--scale)) calc(1 * var(--scale));
+display: flex;
+justify-content: center;
+cursor: pointer;
+height: 30%;
+width: 80%;
+
+background:linear-gradient(#121213, #121213), linear-gradient(#121213 50%, rgba(18, 18, 19, 0.6) 80%, rgba(18, 18, 19, 0)),  linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--indigo), var(--violet), var(--red));
+background-origin: border-box;
+background-clip: padding-box, border-box, border-box;
+background-size: 200%;
+animation: animate 3s infinite linear;
+}
+
+button::before {
+content: '';
+background: linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--indigo), var(--violet), var(--red));
+height: 30%;
+width: 80%;
+position: absolute;
+bottom: -5%;
+z-index: -5;
+background-size: 200%;
+animation: animate 3s infinite linear;
+filter: blur(calc(0.5 * var(--scale)));
+}
+
+button:hover, button:hover::before {
+animation: animate 0.5s infinite linear;
+}
+
+/*  This ensures that the color gradient cycles through twice before looping to appear less jarring  */
+@keyframes animate {
+0% {background-position: 0}
+100% {background-position: 200%}
+}
+
+
+.padder {
+padding-left: 17px;
+padding-right: 17px;
+
+}
+
+.padder::onclick {
+    height: 40%;
+    width: 40%;
+}
+
+/*  This changes the scale of the cards and text but not the images, so the cards stay relitively the same size when the screen gets smaller */
+@media screen and (max-width: 1000px) {
+    :root {
+        --scale: 2rem;
+    }
+}
+
+.button-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  border: 5px solid #1e1e1e;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 70px
+}
+
+#divPad{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    word-break: break-all;
+}
+h3 {
+    font-family: 'Dancing Script', cursive;
+}
+p {
+    font-family: 'Dancing Script', cursive;
 }

@@ -1,16 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Space%20Grotesk:700|Space%20Grotesk:400');
+
 :root {
     --display-color: #ffffff;
+    --font-color: rgb(15, 182, 15);
 }
 
 body {
     background-color: #1e1e1e;
     color: var(--display-color);
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    font-family: 'Dancing Script', cursive;
 }
 .chat-container {
     width: 80vw;
@@ -26,13 +30,15 @@ body {
     background-color: #3e3e3e;
     padding: 10px;
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
     border-bottom: 1px solid #4e4e4e;
 }
 .chat-messages {
+    font-size: 24px;
     flex: 1;
     padding: 10px;
     overflow-y: auto;
+    color: var(--font-color);
 }
 .chat-input {
     display: flex;

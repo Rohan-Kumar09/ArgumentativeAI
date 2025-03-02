@@ -31,8 +31,3 @@ console.log(getContent("Socrates"))
 
 
 export default db
-
-console.log(getContent("Socrates"))
-
-
-export default db

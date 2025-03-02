@@ -3,7 +3,7 @@
 
 :root {
     --display-color: #ffffff;
-    --font-color: rgb(15, 182, 15);
+    --font-color: rgb(213, 237, 213);
 }
 
 body {
@@ -14,7 +14,6 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Dancing Script', cursive;
 }
 .chat-container {
     width: 80vw;
@@ -27,6 +26,7 @@ body {
     overflow: hidden;
 }
 .chat-header {
+    font-family: 'Dancing Script', cursive;
     background-color: #3e3e3e;
     padding: 10px;
     text-align: center;

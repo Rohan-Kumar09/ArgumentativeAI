@@ -2,9 +2,9 @@ import dotenv from "dotenv";
 import Groq from "groq-sdk";
 
 dotenv.config();
-
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
-
+const KEY = "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";
+// const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+const groq = new Groq({ apiKey: KEY });
 export async function main() {
 	try {
 		const content = "What is Groq?"; // Sample content

@@ -14,7 +14,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Dancing Script', cursive;
+    /*font-family: 'Dancing Script', cursive;*/
 }
 .chat-container {
     width: 80vw;

@@ -2,7 +2,6 @@ import express from 'express'
 import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
 import actions from './actions.js'
-import { getGroqChatCompletion } from './AI.js'
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -23,17 +22,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
-// POST route to handle chat-box requests
-app.post('/chat-box', async (req, res) => {
-    const { history } = req.body;
-    try {
-        const apiMessage = await getGroqChatCompletion(history);
-        res.json(apiMessage);
-    } catch (error) {
-        console.error('Error fetching chat completion:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-});
+app.use('/chat-box', actions)
 
 app.listen(PORT, () => {
     console.log(`Server has started on port: ${PORT}`)

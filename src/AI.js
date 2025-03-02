@@ -5,15 +5,15 @@ dotenv.config();
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
-export async function main() {
-	try {
-		const content = "What is Groq?"; // Sample content
-		const chatCompletion = await getGroqChatCompletion(content);
-		console.log(chatCompletion.choices[0]?.message?.content || "");
-	} catch (error) {
-		console.error("Error getting chat completion:", error);
-	}
-}
+// export async function main() {
+// 	try {
+// 		const content = "What is Groq?"; // Sample content
+// 		const chatCompletion = await getGroqChatCompletion(content);
+// 		console.log(chatCompletion.choices[0]?.message?.content || "");
+// 	} catch (error) {
+// 		console.error("Error getting chat completion:", error);
+// 	}
+// }
 
 export async function getGroqChatCompletion(content) {
 	try {

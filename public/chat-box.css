@@ -1,6 +1,10 @@
+:root {
+    --display-color: #ffffff;
+}
+
 body {
     background-color: #1e1e1e;
-    color: #ffffff;
+    color: var(--display-color);
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -10,6 +14,7 @@ body {
 }
 .chat-container {
     width: 80vw;
+    height: 85vh;
     background-color: #2e2e2e;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -38,7 +43,7 @@ body {
     padding: 10px;
     background-color: #3e3e3e;
     border: none;
-    color: #ffffff;
+    color: var(--display-color);
     resize: none;
     outline: none;
 }
@@ -46,7 +51,7 @@ body {
     padding: 10px;
     background-color: #5e5e5e;
     border: none;
-    color: #ffffff;
+    color: var(--display-color);
     cursor: pointer;
 }
 .chat-input button:hover {
